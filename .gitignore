@@ -4,6 +4,7 @@
 /server/.env
 /node_modules
 /dist
-/frontend/.parcel-cache
+frontend/.parcel-cache
 /server/.parcel-cache
 .DS_Store
+frontend/dist

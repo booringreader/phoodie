@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header.js";
+import Header from "./components/Header.js"
 import RestaurantCard from "./components/RestaurantCard.js"
 import Body from "./components/Body.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -33,14 +33,16 @@ const AppLayout = () => {
     }, []);
 
    return(
-    <UserContext.Provider value={{ loggedInUser: username, setUserName }}>
-       <div className="app"> {/* entire app wrapped around the context */}
+    <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: username, setUserName }}>
+                <div className="app"> {/* entire app wrapped around the context */}
                     <Stripes>
                         <Header />
                     </Stripes>
                     <Outlet />
                 </div>
-    </UserContext.Provider>
+            </UserContext.Provider>
+        </Provider>
    ) ;
 };
 const appRouter = createBrowserRouter([
