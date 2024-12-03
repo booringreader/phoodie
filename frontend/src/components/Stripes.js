@@ -8,7 +8,7 @@ const Stripes = ({ children }) => {
       {stripes.map((_, index) => (
         <div
           key={index}
-          className={`h-[720px] w-[100px] ${index % 2 === 0 ? "bg-[#F9F7F1]" : "bg-[##F5F1E9]"}`}
+          className={`h-[720px] w-[100px] ${index % 2 === 0 ? "bg-[#F9F7F1]" : "bg-white"}`}
         ></div>
       ))}
       <div className="absolute inset-0">{children}</div>

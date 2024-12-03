@@ -1,4 +1,3 @@
-// components/SignInForm.js
 import React, { useState } from 'react';
 
 const SignInForm = ({ onSubmit }) => {
@@ -14,24 +13,26 @@ const SignInForm = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Email</label>
         <input
           type="email"
+          placeholder='Email or mobile number'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          className="border border-black rounded-md px-3 mx-3 py-3"
         />
       </div>
       <div>
-        <label>Password</label>
         <input
           type="password"
+          placeholder='Password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          className='text-center px-3 border border-black rounded-md mx-3 my-2'
         />
       </div>
-      <button type="submit">Sign In</button>
+      <button type="submit" className=''>Sign In</button>
     </form>
   );
 };
